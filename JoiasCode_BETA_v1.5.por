@@ -1,10 +1,13 @@
 programa
-{		
+{	
+	//BIBLIOTECAS USADAS
 	inclua biblioteca Matematica --> mat
 	inclua biblioteca Calendario --> cal
 	
 	funcao inicio()
 	{
+
+		// TODAS AS VÁRIASVEIS E VETORES USADAS.
 		const inteiro TAM = 10
 		cadeia produto[TAM] = {"PULSEIRA ICY","ANEL TOPÁZIO","COlAR SAFIRA","PULSEIRA LIZ","ANEL CRISTAL","BRINCO JASPE","PINGENTE LUA","COLAR AMÉLIA","ANEL CRISTAL","BRINCO ÁGATA"}
 		cadeia carrinho[TAM], codigo[TAM]
@@ -24,6 +27,7 @@ programa
 			auxQntd[x] = 0
 		}
 
+		// NOME, SLOGAN E PRODUTOS
 		linha()
 		escreva("\n\t\t      \n")
 		nome()
@@ -44,6 +48,7 @@ programa
 		leia(opcao3)
 		linha()
 
+		// COMEÇO DA PRIMEIRA FUNÇÃO DE FAZER COMPRAS
 		se(opcao3 == "S" ou opcao3 == "s")
 		{
 			se(opcao == "S" ou opcao == "s")
@@ -55,6 +60,7 @@ programa
 						
 					para (x = 0; x < 10; x++)
 					{
+						// CONDIÇÕES DE SEELEÇÕES DE QUANTIDADES
 						se (auxCod == codigo[x])
 						{
 							escreva("INFORME A QUANTIDADE QUE DESEJA: ")
@@ -78,6 +84,7 @@ programa
 							}
 							senao se(contEstoque[x] <= estoque[x])
 							{
+								// VALIDAÇÃO E O PRIMEIRO CARRINHO DO CÓDIGO
 								estoque[x] = estoque[x] - contEstoque[x]
 								valorCompra[x] = valores[x] * auxQntd[x]
 
@@ -103,7 +110,8 @@ programa
 						}
 						
 					}
-					
+
+					// FUNÇÃO DE CONTINUAR COMPRANDO
 					linha()
 					escreva("\nDESEJA CONTINUAR COMPRANDO?")
 					escreva("\nDIGITE 'S' PARA SIM E 'N' PARA NÃO: ")
@@ -142,7 +150,8 @@ programa
 					}
 					linha ()	
 				}
-	
+
+				// FUNÇÃO DE MODIFICAR COMPRAS - ADIÇÃO OU REMOÇÃO DOS PRODUTOS
 				escreva("\nDESEJA MODIFICAR SEU PEDIDO?")
 				escreva("\nDIGITE 'S' PARA SIM E 'N' PARA NÃO: ")
 				leia(opcao2)
@@ -164,6 +173,7 @@ programa
 						}	
 	               	}	
 
+					// CARRINHO DE MODIFICAR COMPRAS
 	               	linha ()
 					escreva("\t         ✧ CARRINHO DE COMPRAS ✧")
 					linha ()
@@ -200,6 +210,7 @@ programa
 				}
 				senao
 				{
+					// FINALIZAÇÃO DAS COMPRAS
 					linha()
 					escreva("\t   VALOR TOTAL DA COMPRA: R$", contador)
 					linha()
@@ -213,7 +224,8 @@ programa
 					{
 						escreva("INSIRA AQUI SUA FORMA DE PAGAMENTO: ")
 						leia(pagamento)
-					
+
+					// ESCOLHA CASO DA EMISSÃO DAS NOTAS FISCAIS
 						escolha(pagamento)
 						{
 							caso 1:
@@ -263,7 +275,7 @@ programa
 							
 					}enquanto(pagamento >= 3)
 				}
-				
+				// EXIBIÇÃO DOS PRODUTOS E CARRINHO APÓS FINALIZAR AS COMPRAS
 				escreva("\t          RELAÇÃO DE PRODUTOS")
 				linha()
 				escreva("CÓDIGO\t        PRODUTO\t\t   PREÇO\t  ESTOQUE\n")
@@ -279,6 +291,7 @@ programa
 				linha ()
 				
 			}
+			//CONDIÇÕES PRA FINALIZAR SE O USUARIO NÃO DESEJA CONTINUAR FAZER COMPRAS OU DIGITOU ERRADO
 			senao se (opcao == "n" ou opcao == "N")
 			{
 				limpa()
@@ -299,6 +312,7 @@ programa
 				inicio()
 			}
 		}
+		//CONDIÇÕES PRA FINALIZAR SE O USUARIO NÃO DESEJA FAZER COMPRAS OU DIGITO ERRADOS
 		senao se (opcao3 == "n" ou opcao3 == "N")
 		{
 			limpa()
@@ -323,7 +337,8 @@ programa
 	funcao linha(){
 		  escreva("\n══════════════════════════════════════════════════════════\n ")
 	}
-	
+
+	// UX DO NOME
 	funcao nome(){
 		escreva("\t\t☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆\n")
 		escreva("\t\t☆ ╔═══════════════════╗ ☆\n")
@@ -337,9 +352,9 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 4577; 
+ * @POSICAO-CURSOR = 33; 
  * @PONTOS-DE-PARADA = ;
- * @SIMBOLOS-INSPECIONADOS = ;
+ * @SIMBOLOS-INSPECIONADOS = {estoque, 15, 10, 7}-{contEstoque, 16, 10, 11}-{auxQntd, 18, 10, 7};
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
  * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
  */
