@@ -9,7 +9,7 @@ Construido com  ❤ por <a href="https://github.com/AnaPaulaSouzaDias">Ana Paula
 <a href="https://github.com/andcoelho">Anderson Coelho</a>,
 <a href="https://github.com/CassiaDeArruda">Cássia de Arruda</a>,
 <a href="https://github.com/BeatrizGomesAbreu">Beatriz Gomes</a>,
-<a href="https://github.com/LukyAguiar">Lucas Aguiar</a>
+<a href="https://github.com/LukyAguiar">Lucas Aguiar</a>,
 <a href="https://github.com/jonpdro">João Pedro</a>
   </sub>
 </div>
